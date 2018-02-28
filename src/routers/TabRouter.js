@@ -41,6 +41,10 @@ export default (routeConfigs, config = {}) => {
     );
   }
   return {
+    getActionCreatorsForRoute(route) {
+      return NavigationActions.getActionCreatorsForRoute(route);
+    },
+
     getStateForAction(action, inputState) {
       // Establish a default state
       let state = inputState;
